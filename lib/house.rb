@@ -5,7 +5,8 @@ class House
 	end
 
   def line(num)
-		lines = ['the dog that worried',
+		lines = ['the cow with the crumpled horn that tossed',
+						 'the dog that worried',
 						 'the cat that killed',
 			       'the rat that ate', 
 			       'the malt that lay in', 
