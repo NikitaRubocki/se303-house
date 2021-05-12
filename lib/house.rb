@@ -1,11 +1,11 @@
 class House
 
 	def recite
-		# 1.upto(12).collect { |i| line(i) }.join("\n")
 		(1..12).collect { |i| line(i) }.join("\n")
 	end
 
   def line(num)
+		lines = ['the house that Jack built']
 		case num
 		when 1
 			"This is the house that Jack built.\n"
