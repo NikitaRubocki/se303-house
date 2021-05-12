@@ -8,7 +8,7 @@ class House
 		lines = ['the malt that lay in', 'the house that Jack built']
 		case num
 		when 1
-			"This is #{lines.last}.\n"
+			"This is #{lines.last(num).join(' ')}.\n"
 		when 2
 			"This is #{lines.last(num).join(' ')}.\n"
 		when 3
