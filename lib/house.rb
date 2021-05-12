@@ -5,7 +5,9 @@ class House
 	end
 
   def line(num)
-		lines = ['the malt that lay in', 'the house that Jack built']
+		lines = ['the rat that ate', 
+			       'the malt that lay in', 
+						 'the house that Jack built']
 		case num
 		when 3
 			"This is the rat that ate the malt that lay in the house that Jack built.\n"
