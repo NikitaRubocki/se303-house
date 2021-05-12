@@ -1,5 +1,9 @@
 class House
 
+	def recite
+		1.upto(12).collect { |i| line(i) }.join("\n")
+	end
+
   def line(num)
 		case num
 		when 1
@@ -29,8 +33,6 @@ class House
 		end
 	end
 
-	def recite
-		1.upto(12).collect { |i| line(i) }.join("\n")
-	end
+	
 
 end
