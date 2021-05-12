@@ -5,7 +5,7 @@ class House
 	end
 
   def line(num)
-		lines = ['the house that Jack built']
+		lines = ['the house that Jack built', 'the malt that lay in']
 		case num
 		when 1
 			"This is #{lines[0]}.\n"
