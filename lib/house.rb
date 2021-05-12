@@ -8,9 +8,9 @@ class House
 		lines = ['the malt that lay in', 'the house that Jack built']
 		case num
 		when 1
-			"This is #{lines[1]}.\n"
+			"This is #{lines.last}.\n"
 		when 2
-			"This is #{lines[0]} #{lines[1]}.\n"
+			"This is #{lines[0]} #{lines.last}.\n"
 		when 3
 			"This is the rat that ate the malt that lay in the house that Jack built.\n"
 		when 4
