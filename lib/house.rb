@@ -14,8 +14,6 @@ class House
 			       'the malt that lay in', 
 						 'the house that Jack built']
 		case num
-		when 8
-			"This is #{lines.last(num).join(' ')}.\n"
 		when 9
 			"This is the priest all shaven and shorn that married the man all tattered and torn that kissed the maiden all forlorn that milked the cow with the crumpled horn that tossed the dog that worried the cat that killed the rat that ate the malt that lay in the house that Jack built.\n"
 		when 10 
