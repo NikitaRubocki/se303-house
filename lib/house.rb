@@ -17,12 +17,7 @@ class House
 			       'the rat that ate', 
 			       'the malt that lay in', 
 						 'the house that Jack built']
-		case num
-		when 12
-			"This is #{lines.last(num).join(' ')}.\n"
-		else
-			"This is #{lines.last(num).join(' ')}.\n"
-		end
+		"This is #{lines.last(num).join(' ')}.\n"
 		
 	end
 
