@@ -10,8 +10,6 @@ class House
 			       'the malt that lay in', 
 						 'the house that Jack built']
 		case num
-		when 4
-			"This is #{lines.last(num).join(' ')}.\n"
 		when 5
 			"This is the dog that worried the cat that killed the rat that ate the malt that lay in the house that Jack built.\n"
 		when 6
