@@ -1,5 +1,10 @@
 class House
 
+	def init(start='This is', random=false)
+		@start = start
+		@random = random
+	end
+
 	def recite
 		(1..12).collect { |i| line(i) }.join("\n")
 	end
