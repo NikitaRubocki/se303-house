@@ -13,7 +13,6 @@ class House
   def line(num)
 		pieces = lines
 		if @random == true
-			puts 'here'
 			pieces = lines.shuffle(random: Random.new(@seed))
 		end
 		"#{@start} #{pieces.last(num).join(' ')}.\n"
