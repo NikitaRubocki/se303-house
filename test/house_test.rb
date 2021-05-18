@@ -101,6 +101,16 @@ This is the horse and the hound and the horn that belonged to the farmer sowing 
       expected = "Thar be the house that Jack built.\n"
       assert_equal expected, House.new.line(1, 'Thar be')
     end
+
+    def test_line_2
+      expected = "Thar be the malt that lay in the house that Jack built.\n"
+      assert_equal expected, House.new.line(2, 'Thar be')
+    end
+
+    def test_line_3
+      expected = "Thar be the rat that ate the malt that lay in the house that Jack built.\n"
+      assert_equal expected, House.new.line(3, 'Thar be')
+    end
   end
 
 end
