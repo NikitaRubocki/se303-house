@@ -1,8 +1,9 @@
 class House
 
-	def initialize(start: 'This is', random: false)
+	def initialize(start: 'This is', random: false, seed: 1)
 		@start = start
 		@random = random
+		@seed = seed
 	end
 
 	def recite
@@ -12,9 +13,10 @@ class House
   def line(num)
 		pieces = lines
 		if @random == true
-			pieces = lines.shuffle(random: Random.new(2))
+			puts 'here'
+			pieces = lines.shuffle(random: Random.new(@seed))
 		end
-		"#{@start} #{lines.last(num).join(' ')}.\n"
+		"#{@start} #{pieces.last(num).join(' ')}.\n"
 	end
 
 	private

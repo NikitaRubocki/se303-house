@@ -113,12 +113,12 @@ This is the horse and the hound and the horn that belonged to the farmer sowing 
     end
   end
 
-  # describe 'random changes' do
-  #   def test_line_4
-  #     # expected = "This is the cat that killed the rat that ate the malt that lay in the house that Jack built.\n"
-  #     # assert_equal expected, House.new.line(4)
-  #     puts House.new(randomtrue).line(4)
-  #   end
-  # end
+  describe 'random changes' do
+    def test_line_4
+      # expected = "This is the cat that killed the rat that ate the malt that lay in the house that Jack built.\n"
+      # assert_equal expected, House.new.line(4)
+      puts House.new(random: true, seed: 1).line(4)
+    end
+  end
 
 end
