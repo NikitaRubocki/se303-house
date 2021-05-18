@@ -4,8 +4,8 @@ class House
 		(1..12).collect { |i| line(i) }.join("\n")
 	end
 
-  def line(num)
-		"This is #{lines.last(num).join(' ')}.\n"
+  def line(num, start='This is')
+		"#{start} #{lines.last(num).join(' ')}.\n"
 	end
 
 	private
