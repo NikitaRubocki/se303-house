@@ -1,6 +1,6 @@
 class House
 
-	def initialize(start='This is', random=false)
+	def initialize(start: 'This is', random: false)
 		@start = start
 		@random = random
 	end
@@ -12,7 +12,7 @@ class House
   def line(num)
 		pieces = lines
 		if @random == true
-			pieces = lines.shuffle(random: Random.new(1))
+			pieces = lines.shuffle(random: Random.new(2))
 		end
 		"#{@start} #{lines.last(num).join(' ')}.\n"
 	end
