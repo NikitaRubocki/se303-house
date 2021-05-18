@@ -10,7 +10,7 @@ class House
 	end
 
   def line(num, start='This is')
-		"#{start} #{lines.last(num).join(' ')}.\n"
+		"#{@start} #{lines.last(num).join(' ')}.\n"
 	end
 
 	private
