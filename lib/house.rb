@@ -1,6 +1,6 @@
 class House
 
-	def init(start='This is', random=false)
+	def initialize(start='This is', random=false)
 		@start = start
 		@random = random
 	end
