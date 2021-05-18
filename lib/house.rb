@@ -10,6 +10,10 @@ class House
 	end
 
   def line(num)
+		pieces = lines
+		if @random == true
+			pieces = lines.shuffle(random: Random.new(1))
+		end
 		"#{@start} #{lines.last(num).join(' ')}.\n"
 	end
 
