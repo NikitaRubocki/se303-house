@@ -1,6 +1,6 @@
 class Lyric
 
-	def initialize(num=0, start: 'This is', random: false, seed: 1)
+	def initialize(num, start: 'This is', random: false, seed: 1)
 		@num = num
 		@start = start
 		@random = random
