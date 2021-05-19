@@ -13,7 +13,7 @@ class House
 	end
 
   def line(num)
-		lyric = Lyric.new
+		lyric = Lyric.new(num)
 		pieces = lyric.line
 		if @random == true
 			pieces = lyric.line.shuffle(random: Random.new(@seed))
