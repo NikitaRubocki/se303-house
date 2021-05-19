@@ -37,4 +37,8 @@ class Lyric
 end
 
 class RandomLyric < Lyric
+
+	def line
+	end
+
 end
