@@ -1,3 +1,5 @@
+require_relative 'lyric.rb'
+
 class House
 
 	def initialize(start: 'This is', random: false, seed: 1)
@@ -11,6 +13,7 @@ class House
 	end
 
   def line(num)
+		lyric = Lyric.new
 		pieces = lines
 		if @random == true
 			pieces = lines.shuffle(random: Random.new(@seed))
