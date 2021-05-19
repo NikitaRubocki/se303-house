@@ -35,3 +35,6 @@ class Lyric
 	end
 
 end
+
+class RandomLyric < Lyric
+end
