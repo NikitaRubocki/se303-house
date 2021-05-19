@@ -7,12 +7,12 @@ class Lyric
 		@seed = seed
 	end
 
-	def self.for(random)
+	def self.for(num, start, random, seed)
 		if random == true
-			RandomLyric
+			RandomLyric.new(num, start, random, seed)
 		else
-			Lyric
-		end.new()
+			Lyric.new(num, start)
+		end
 	end
 
 	def line
@@ -45,6 +45,13 @@ class Lyric
 end
 
 class RandomLyric < Lyric
+
+	def initialize(num, start, random, seed)
+		@num = num
+		@start = start
+		@random = random
+		@seed = seed
+	end
 
 	def line
 
