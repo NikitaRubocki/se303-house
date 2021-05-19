@@ -16,7 +16,7 @@ class House
 		lyric = Lyric.new
 		pieces = lyric.line
 		if @random == true
-			pieces = lines.shuffle(random: Random.new(@seed))
+			pieces = lyric.line.shuffle(random: Random.new(@seed))
 		end
 		"#{@start} #{pieces.last(num).join(' ')}.\n"
 	end
