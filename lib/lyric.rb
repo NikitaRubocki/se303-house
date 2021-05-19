@@ -13,7 +13,7 @@ class Lyric
 			pieces = lines.shuffle(random: Random.new(@seed))
 		end
 		"#{@start} #{pieces.last(@num).join(' ')}.\n"
-		lines
+		# lines
 	end
 
 	private
