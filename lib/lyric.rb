@@ -1,8 +1,13 @@
 class Lyric
+
 	def initialize(start: 'This is', random: false, seed: 1)
 		@start = start
 		@random = random
 		@seed = seed
+	end
+
+	def line
+		lines
 	end
 
 	private
@@ -23,5 +28,5 @@ class Lyric
 			'the house that Jack built'
 		]
 	end
-	
+
 end
