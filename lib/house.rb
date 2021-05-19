@@ -14,7 +14,7 @@ class House
 
   def line(num)
 		lyric = Lyric.new
-		pieces = lines
+		pieces = lyric.line
 		if @random == true
 			pieces = lines.shuffle(random: Random.new(@seed))
 		end
