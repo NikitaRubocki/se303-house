@@ -8,6 +8,11 @@ class Lyric
 	end
 
 	def line
+		pieces = lines
+		if @random == true
+			pieces = lines.shuffle(random: Random.new(@seed))
+		end
+		"#{@start} #{pieces.last(@num).join(' ')}.\n"
 		lines
 	end
 
