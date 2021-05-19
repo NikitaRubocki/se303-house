@@ -1,10 +1,18 @@
 class Lyric
 
-	def initialize(num, start: 'This is', random: false, seed: 1)
+	def initialize(num, start, random, seed)
 		@num = num
 		@start = start
 		@random = random
 		@seed = seed
+	end
+
+	def self.for(random)
+		if random == true
+			RandomLyric
+		else
+			Lyric
+		end.new()
 	end
 
 	def line
@@ -39,6 +47,7 @@ end
 class RandomLyric < Lyric
 
 	def line
+
 	end
 
 end

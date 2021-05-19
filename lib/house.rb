@@ -13,7 +13,7 @@ class House
 	end
 
   def line(num)
-		Lyric.new(num, start: @start, random: @random, seed: @seed).line
+		Lyric.new(num, @start, @random, @seed).line
 	end
 
 end
