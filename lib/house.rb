@@ -79,7 +79,7 @@ class RandomHouse < House
 			'tossed',
 			'worried',
 			'killed',
-			'ate'
+			'ate',
 			'lay in'
 		]
 	end

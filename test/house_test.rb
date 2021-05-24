@@ -129,6 +129,10 @@ This is the horse and the hound and the horn that belonged to the farmer sowing 
       expected = "This is the horse and the hound and the horn that belonged to the priest all shaven and shorn that married the rat that ate the cat that killed the malt that lay in the house that Jack built.\n"
       assert_equal expected, RandomHouse.new(seed: 3).line(6)
     end
+
+    # def test_new_random
+    #   puts RandomHouse.new(seed: 1).line(3)
+    # end
   end
 
 end
