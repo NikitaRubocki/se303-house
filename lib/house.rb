@@ -9,7 +9,7 @@ class House
 	end
 
 	def phrase(num)
-		lines.last(num).join(' ')
+		data.last(num).join(' ')
 	end
 
   def line(num)
@@ -18,7 +18,7 @@ class House
 
 	private
 	
-	def lines
+	def data
 		[
 			'the horse and the hound and the horn that belonged to',
 			'the farmer sowing his corn that kept',
@@ -34,4 +34,12 @@ class House
 			'the house that Jack built'
 		]
 	end
+
+end
+
+class RandomHouse < House
+
+	def data
+	end
+	
 end
