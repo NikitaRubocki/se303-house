@@ -8,7 +8,8 @@ class House
 		(1..12).collect { |i| line(i) }.join("\n")
 	end
 
-	def phrase
+	def phrase(num)
+		lines.last(num).join(' ')
 	end
 
   def line(num)
