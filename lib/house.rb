@@ -1,6 +1,6 @@
 class House
 
-	def initialize(start: 'This is')
+	def initialize(start='This is')
 		@start = start
 	end
 
@@ -41,7 +41,7 @@ end
 
 class RandomHouse < House
 
-	def initialize(start, seed=1)
+	def initialize(start='This is', seed: 1)
 		super(start)
 		@seed = seed
 	end
