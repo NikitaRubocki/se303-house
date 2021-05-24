@@ -52,4 +52,10 @@ class RandomHouse < House
 		@data.append('the house that Jack built')
 	end
 
+	def subject
+	end
+
+	def verb
+	end
+
 end
