@@ -13,7 +13,7 @@ class House
 	end
 
   def line(num)
-		"#{@start} #{lines.last(num).join(' ')}.\n"
+		"#{@start} #{phrase(num)}.\n"
 	end
 
 	private
