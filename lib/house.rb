@@ -53,9 +53,35 @@ class RandomHouse < House
 	end
 
 	def subject
+		[
+			'horse and the hound and the horn',
+			'farmer sowing his corn',
+			'rooster that crowed in the morn',
+			'priest all shaven and shorn',
+			'man all tattered and torn',
+			'maiden all forlorn',
+			'cow with the crumpled horn',
+			'dog',
+			'cat',
+			'rat',
+			'malt'
+		]
 	end
 
 	def verb
+		[
+			'belonged to',
+			'kept',
+			'woke',
+			'married',
+			'kissed',
+			'milked',
+			'tossed',
+			'worried',
+			'killed',
+			'ate'
+			'lay in'
+		]
 	end
 
 end
