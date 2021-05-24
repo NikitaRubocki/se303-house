@@ -48,6 +48,8 @@ class RandomHouse < House
 
 	def data
 		@data ||= super.shuffle(random: Random.new(@seed))
+		@data.delete('the house that Jack built')
+		@data.append('the house that Jack built')
 	end
 
 end
