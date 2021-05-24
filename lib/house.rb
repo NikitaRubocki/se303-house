@@ -37,18 +37,17 @@ class House
 		DATA
 	end
 
-
 end
 
 class RandomHouse < House
 
-	def initialize(start, seed)
+	def initialize(start, seed=1)
 		super(start)
 		@seed = seed
 	end
 
 	def data
-		@data ||= super.shuffle
+		@data ||= super.shuffle(Random.new(@seed))
 	end
 
 end
