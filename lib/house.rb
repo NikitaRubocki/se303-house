@@ -47,7 +47,7 @@ class RandomHouse < House
 	end
 
 	def data
-		@data ||= super.shuffle(Random.new(@seed))
+		@data ||= super.shuffle(random: Random.new(@seed))
 	end
 
 end
