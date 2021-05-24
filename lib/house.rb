@@ -42,7 +42,13 @@ end
 
 class RandomHouse < House
 
+	def initialize(start, seed)
+		super(start)
+		@seed = seed
+	end
+
 	def data
+		@data ||= super.shuffle
 	end
 
 end
