@@ -119,15 +119,16 @@ This is the horse and the hound and the horn that belonged to the farmer sowing 
       assert_equal expected, RandomHouse.new(seed: 1).line(4)
     end
 
-    # def test_line_5
-    #   expected = "This is the dog that worried the house that Jack built the rat that ate the cat that killed the maiden all forlorn that milked.\n"
-    #   assert_equal expected, RandomHouse.new(seed: 1).line(5)
-    # end
+    def test_line_5
+      puts RandomHouse.new(seed: 2).line(5)
+      expected = "This is the priest all shaven and shorn that married the rooster that crowed in the morn that woke the cow with the crumpled horn that tossed the cat that killed the house that Jack built.\n"
+      assert_equal expected, RandomHouse.new(seed: 2).line(5)
+    end
 
-    # def test_line_6
-    #   expected = "This is the horse and the hound and the horn that belonged to the dog that worried the house that Jack built the rat that ate the cat that killed the maiden all forlorn that milked.\n"
-    #   assert_equal expected, RandomHouse.new(seed: 1).line(6)
-    # end
+    def test_line_6
+      expected = "This is the horse and the hound and the horn that belonged to the priest all shaven and shorn that married the rat that ate the cat that killed the malt that lay in the house that Jack built.\n"
+      assert_equal expected, RandomHouse.new(seed: 3).line(6)
+    end
   end
 
 end
