@@ -5,7 +5,7 @@ require_relative '../lib/house'
 
 class HouseTest < Minitest::Test
 
-  describe 'original tests' do
+  describe 'original version' do
     def test_line_1
       expected = "This is the house that Jack built.\n"
       assert_equal expected, House.new.line(1)
@@ -96,7 +96,7 @@ This is the horse and the hound and the horn that belonged to the farmer sowing 
     end
   end 
 
-  describe 'thar be changes' do
+  describe 'pirate version' do
     def test_line_1
       expected = "Thar be the house that Jack built.\n"
       assert_equal expected, House.new('Thar be').line(1)
@@ -113,14 +113,13 @@ This is the horse and the hound and the horn that belonged to the farmer sowing 
     end
   end
 
-  describe 'random changes' do
+  describe 'random version' do
     def test_line_4
       expected = "This is the rat that ate the cat that killed the maiden all forlorn that milked the house that Jack built.\n"
       assert_equal expected, RandomHouse.new(seed: 1).line(4)
     end
 
     def test_line_5
-      puts RandomHouse.new(seed: 2).line(5)
       expected = "This is the priest all shaven and shorn that married the rooster that crowed in the morn that woke the cow with the crumpled horn that tossed the cat that killed the house that Jack built.\n"
       assert_equal expected, RandomHouse.new(seed: 2).line(5)
     end
