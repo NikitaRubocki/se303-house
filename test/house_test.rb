@@ -134,4 +134,21 @@ This is the horse and the hound and the horn that belonged to the farmer sowing 
     # end
   end
 
+  describe 'random pirate version' do
+    def test_line_4
+      expected = "Thar be the rat that ate the cat that killed the maiden all forlorn that milked the house that Jack built.\n"
+      assert_equal expected, RandomHouse.new('Thar be', seed: 1).line(4)
+    end
+
+    def test_line_5
+      expected = "Thar be the priest all shaven and shorn that married the rooster that crowed in the morn that woke the cow with the crumpled horn that tossed the cat that killed the house that Jack built.\n"
+      assert_equal expected, RandomHouse.new('Thar be', seed: 2).line(5)
+    end
+
+    def test_line_6
+      expected = "Thar be the horse and the hound and the horn that belonged to the priest all shaven and shorn that married the rat that ate the cat that killed the malt that lay in the house that Jack built.\n"
+      assert_equal expected, RandomHouse.new('Thar be', seed: 3).line(6)
+    end
+  end
+
 end
