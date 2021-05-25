@@ -43,11 +43,11 @@ class RandomHouse < House
 
 	def initialize(start='This is', seed: Random.new())
 		super(start)
-		@seed = seed
+		@random_val = Random.new(seed)
 	end
 
 	def data
-		@data ||= super.shuffle(random: Random.new(@seed))
+		@data ||= super.shuffle(random: @random_val)
 		@data.delete('the house that Jack built')
 		@data.append('the house that Jack built')
 	end
