@@ -40,7 +40,7 @@ class House
 end
 
 class RandomHouse < House
-	
+
 	def initialize(start='This is', seed: 1)
 		super(start)
 		@seed = seed
@@ -54,53 +54,46 @@ class RandomHouse < House
 
 end 
 
-# class RandomHouse < House
+class ShuffleHouse < House
 
-# 	def initialize(start='This is', seed: 1)
-# 		super(start)
-# 		@seed = seed
-# 	end
+	def initialize(start='This is', seed: 1)
+		super(start)
+		@seed = seed
+	end
 
-# 	def data
-# 		# @data ||= super.shuffle(random: Random.new(@seed))
-# 		# @data.delete('the house that Jack built')
-# 		# @data.append('the house that Jack built')
-# 		subjects = SUBJECTS.shuffle(random: Random.new(@seed))
-# 		verbs = VERBS.shuffle(random: Random.new(@seed+1))
-# 		data = (0..10).map { |i| "the #{subjects[i]} that #{verbs[i]}" }
-# 		data.append('the house that Jack built')
-# 	end
+	def data
+		subjects = SUBJECTS.shuffle(random: Random.new(@seed))
+		verbs = VERBS.shuffle(random: Random.new(@seed+1))
+		data = (0..10).map { |i| "the #{subjects[i]} that #{verbs[i]}" }
+		data.append('the house that Jack built')
+	end
 
-# 	# def subject
-# 	SUBJECTS = [
-# 			'horse and the hound and the horn',
-# 			'farmer sowing his corn',
-# 			'rooster that crowed in the morn',
-# 			'priest all shaven and shorn',
-# 			'man all tattered and torn',
-# 			'maiden all forlorn',
-# 			'cow with the crumpled horn',
-# 			'dog',
-# 			'cat',
-# 			'rat',
-# 			'malt'
-# 		]
-# 	# end
+	SUBJECTS = [
+			'horse and the hound and the horn',
+			'farmer sowing his corn',
+			'rooster that crowed in the morn',
+			'priest all shaven and shorn',
+			'man all tattered and torn',
+			'maiden all forlorn',
+			'cow with the crumpled horn',
+			'dog',
+			'cat',
+			'rat',
+			'malt'
+		]
 
-# 	# def verb
-# 		VERBS = [
-# 			'belonged to',
-# 			'kept',
-# 			'woke',
-# 			'married',
-# 			'kissed',
-# 			'milked',
-# 			'tossed',
-# 			'worried',
-# 			'killed',
-# 			'ate',
-# 			'lay in'
-# 		]
-# 	# end
+		VERBS = [
+			'belonged to',
+			'kept',
+			'woke',
+			'married',
+			'kissed',
+			'milked',
+			'tossed',
+			'worried',
+			'killed',
+			'ate',
+			'lay in'
+		]
 
-# end
+end
