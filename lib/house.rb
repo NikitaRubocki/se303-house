@@ -8,22 +8,22 @@ class House
 		(1..12).collect { |i| line(i) }.join("\n")
 	end
 
-	def phrase(num)
-		data.last(num).join(' ')
-	end
-
   def line(num)
 		"#{@start} #{phrase(num)}.\n"
 	end
 
 	private
 
-	def generate_phrase_list
-		(0..10).map { |i| "the #{DATA[:subject][i]} that #{DATA[:verb][i]}" }
+	def phrase(num)
+		data.last(num).join(' ')
 	end
 
 	def data
-		generate_phrase_list.append('the house that Jack built')
+		phrase_list.append('the house that Jack built')
+	end
+
+	def phrase_list
+		(0..10).map { |i| "the #{DATA[:subject][i]} that #{DATA[:verb][i]}" }
 	end
 
 	DATA = {
