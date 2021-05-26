@@ -32,9 +32,40 @@ class House
 		'the malt that lay in', 
 		'the house that Jack built'
 	]
+
+	NEW_DATA = {
+		:subject => [
+			'horse and the hound and the horn',
+			'farmer sowing his corn',
+			'rooster that crowed in the morn',
+			'priest all shaven and shorn',
+			'man all tattered and torn',
+			'maiden all forlorn',
+			'cow with the crumpled horn',
+			'dog',
+			'cat',
+			'rat',
+			'malt'
+		],
+		:verb => [
+			'belonged to',
+			'kept',
+			'woke',
+			'married',
+			'kissed',
+			'milked',
+			'tossed',
+			'worried',
+			'killed',
+			'ate',
+			'lay in'
+		]
+	}
 	
 	def data
-		DATA
+		data = (0..10).map { |i| "the #{NEW_DATA[:subject][i]} that #{NEW_DATA[:verb][i]}" }
+		data.append('the house that Jack built')
+		# DATA
 	end
 
 end
