@@ -64,8 +64,10 @@ class RandomHouse < House
 		@random_val = Random.new(seed)
 	end
 
+	private
+
 	def phrase_list
-		@data ||= super.shuffle(random: @random_val)
+		super.shuffle(random: @random_val)
 	end
 
 end 
@@ -77,11 +79,12 @@ class ShuffleHouse < House
 		@seed = seed
 	end
 
-	def data
-		subjects = SUBJECTS.shuffle(random: Random.new(@seed))
-		verbs = VERBS.shuffle(random: Random.new(@seed+1))
-		data = (0..10).map { |i| "the #{subjects[i]} that #{verbs[i]}" }
-		data.append('the house that Jack built')
+	private
+
+	def phrase_list
+		subjects = DATA[:subject].shuffle(random: Random.new(@seed))
+		verbs = DATA[:verb].shuffle(random: Random.new(@seed+1))
+		(0..10).map { |i| "the #{subjects[i]} that #{verbs[i]}" }
 	end
 
 end
