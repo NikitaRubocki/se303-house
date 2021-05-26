@@ -147,10 +147,21 @@ This is the horse and the hound and the horn that belonged to the farmer sowing 
     end
   end
 
-  # describe 'shuffle version' do
-  #   def test_output
-  #     puts ShuffleHouse.new(seed: 21).line(3)
-  #   end
-  # end
+  describe 'shuffle version' do
+    def test_line_4
+      expected = "This is the malt that tossed the cat that lay in the maiden all forlorn that killed the house that Jack built.\n"
+      assert_equal expected, ShuffleHouse.new(seed: 1).line(4)
+    end
+
+    def test_line_5
+      expected = "This is the priest all shaven and shorn that belonged to the cow with the crumpled horn that married the malt that killed the cat that lay in the house that Jack built.\n"
+      assert_equal expected, ShuffleHouse.new(seed: 2).line(5)
+    end
+
+    def test_line_6
+      expected = "This is the dog that belonged to the horse and the hound and the horn that kept the priest all shaven and shorn that milked the cat that worried the malt that lay in the house that Jack built.\n"
+      assert_equal expected, ShuffleHouse.new(seed: 3).line(6)
+    end
+  end
 
 end
