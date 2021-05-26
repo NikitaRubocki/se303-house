@@ -19,10 +19,10 @@ class House
 	end
 
 	def data
-		phrase_list.append('the house that Jack built')
+		data_list.append('the house that Jack built')
 	end
 
-	def phrase_list
+	def data_list
 		(0..10).map { |i| "the #{DATA[:subject][i]} that #{DATA[:verb][i]}" }
 	end
 
@@ -66,7 +66,7 @@ class RandomHouse < House
 
 	private
 
-	def phrase_list
+	def data_list
 		super.shuffle(random: @random_val)
 	end
 
@@ -81,7 +81,7 @@ class ShuffleHouse < House
 
 	private
 
-	def phrase_list
+	def data_list
 		subjects = DATA[:subject].shuffle(random: Random.new(@seed))
 		verbs = DATA[:verb].shuffle(random: Random.new(@seed+1))
 		(0..10).map { |i| "the #{subjects[i]} that #{verbs[i]}" }
