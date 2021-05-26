@@ -23,8 +23,7 @@ class House
 	end
 
 	def data
-		data = generate_phrase_list
-		data.append('the house that Jack built')
+		generate_phrase_list.append('the house that Jack built')
 	end
 
 	DATA = {
