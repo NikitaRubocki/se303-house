@@ -18,8 +18,12 @@ class House
 
 	private
 
+	def generate_phrase_list
+		(0..10).map { |i| "the #{DATA[:subject][i]} that #{DATA[:verb][i]}" }
+	end
+
 	def data
-		data = (0..10).map { |i| "the #{DATA[:subject][i]} that #{DATA[:verb][i]}" }
+		data = generate_phrase_list
 		data.append('the house that Jack built')
 	end
 
