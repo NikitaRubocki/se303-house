@@ -64,10 +64,8 @@ class RandomHouse < House
 		@random_val = Random.new(seed)
 	end
 
-	def data
+	def phrase_list
 		@data ||= super.shuffle(random: @random_val)
-		@data.delete('the house that Jack built')
-		@data.append('the house that Jack built')
 	end
 
 end 
