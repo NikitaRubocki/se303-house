@@ -10,7 +10,7 @@ class House
 
   def line(num)
 		"#{@start} #{phrase(num)}.\n"
-	end
+  end
 
 	private
 
