@@ -23,7 +23,7 @@ class House
 	end
 
 	def data_list
-		(0..10).map { |i| "the #{DATA[:subject][i]} that #{DATA[:verb][i]}" }
+		(0...DATA[:subject].length).map { |i| "the #{DATA[:subject][i]} that #{DATA[:verb][i]}" }
 	end
 
 	DATA = {
@@ -84,7 +84,7 @@ class ShuffleHouse < House
 	def data_list
 		subjects = DATA[:subject].shuffle(random: Random.new(@seed))
 		verbs = DATA[:verb].shuffle(random: Random.new(@seed+1))
-		(0..10).map { |i| "the #{subjects[i]} that #{verbs[i]}" }
+		(0...DATA[:subject].length).map { |i| "the #{subjects[i]} that #{verbs[i]}" }
 	end
 
 end
